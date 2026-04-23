@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Parque Natural Sierra Bicuera</title>
+    <link rel="stylesheet" href="./estilos/estilos.css" />
   </head>
   <body>
     <div id="header-container"></div>
@@ -15,7 +16,7 @@
         .catch((error) => console.error("Error al cargar el header:", error));
     </script>
     <div id="menu-container"></div>
-      <script>
+    <script>
       fetch("menu.html")
         .then((response) => response.text())
         .then((data) => {
@@ -23,20 +24,27 @@
         })
         .catch((error) => console.error("Error al cargar el menú:", error));
     </script>
-      <div class="container"></div>
-      <main>
-        <h2>Bienvenidos al Parque Natural Sierra Bicuera</h2>
+    <div class="contenedor">
+      <h2>Bienvenidos al Parque Natural</h2>
+      <div class="contenido">
         <p>
-          El Parque Natural Sierra Bicuera fue declarado en 1983 y reconocido
-          como reserva de la biosfera. Con una extensión de 9.090 hectáreas,
-          alberga una gran biodiversidad.
+          El Parque Natural Sierra Bicuera, reserva de la biosfera, es
+          referencia obligada del bosque y matorral mediterráneo interior, y
+          hábitat de flora y fauna autoctona.
+        </p>
+        <p>
+          Fue declarado parque natural en 1983, con una superficie de 9.090 Has.
+          siendo uno de los enclaves más extensos de la Comunidad Valenciana.
+          Con un gran espesor de vegetación, y varios riachuelos ofrecen un
+          clima ideal para las especies terrestres y acuáticas. Sus bosques, de
+          carrasca y pino albergan una amplia colonia de aves.
         </p>
         <p>
           Entre su flora destacan la carrasca y el pino. En cuanto a fauna, se
           pueden observar especies como el buitre leonado, el hálcon peregrino,
           el águila perdicera, el jabalí, el ciervo y el martín pescador.
         </p>
-      </main>
+      </div>
     </div>
     <footer>
       © 2026 Parque Natural Sierra Bicuera - Todos los derechos reservados
