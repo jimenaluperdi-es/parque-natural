@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parque Natural Sierra Bicuera</title>
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error al cargar el header:", error));
+    </script>
+    <div id="menu-container"></div>
+      <script>
+      fetch("menu.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("menu-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error al cargar el menú:", error));
+    </script>
+      <div class="container">
+        <div class="header">
+            <h3>Especies del Parque</h3>
+        </div>
+        <div class="content">
+            <div class="text-section">
+                <p><strong>Estos son algunos de los habitantes de parque:</strong></p>
+                <h3>Nutria</h3>
+                <p>La nutria europea o paleártica (<em>Lutra lutra</em>) es un mamífero carnívoro de hábitat acuático. Se alimenta de peces, ranas y pequeñas presas que caza en el río. Cerca de sus lugares de cobijo, podemos ver toboganes que crean para llegar rápidamente al agua.</p>
+                <h3>Buitre leonado</h3>
+                <p>El buitre leonado (<em>Gyps fulvus</em>) es un ave rapaz, una de las mayores que puede encontrarse en la Península Ibérica. Su alimentación principal es la carroña, que localiza con su aguda vista.</p>
+                <h3>Gineta</h3>
+                <p>La gineta (<em>Genetta genetta</em>) es una especie de mamífero carnívoro. Son grandes trepadoras, muy ágiles y grandes cazadoras de pequeños animales. Aunque también se alimentan de los frutos del bosque que se pueden encontrar en el parque.</p>
+            </div>
+            <div class="image-section">
+                <img src="./img/nutria.png" alt="Nutria europea en su hábitat natural con hierba y follaje verde" title="Nutria europea (Lutra lutra)">
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+      © 2026 Parque Natural Sierra Bicuera - Todos los derechos reservados
+    </footer>
+  </body>
+</html>
