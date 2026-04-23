@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./estilos/estilos.css">
+  <title>Parque Natural Sierra Bicuera</title>
+</head>
+<body>
+    <div id="header-container"></div>
+      <script>
+        fetch("header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-container").innerHTML = data;
+          })
+          .catch((error) => console.error("Error al cargar el header:", error));
+      </script>
+      <div id="menu-container"></div>
+      <script>
+        fetch("menu.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("menu-container").innerHTML = data;
+          })
+          .catch((error) => console.error("Error al cargar el menú:", error));
+      </script>
+  <div class="contenido">
+    <h2>Reservas</h2>
+    <p>El acceso al parque es libre y gratuito, siempre que se respeten las normas de conducta de preservación del entorno.
+      No obstante, también se ofrecen servicios adicionales, como visita guiada o aula educativa para niños.</p>
+  </div>
+  <div class="contenedor">
+    <h3>Horarios y reservas</h3>
+  
+    <div class="tabla">
+      <h3>Visitas con guías:</h3>
+      <table>
+        <tr class="titulo">
+          <td></td>
+          <td>Temporada de verano</td>
+          <td>Temporada de invierno</td>
+        </tr>
+        <tr>
+          <td class="titulo">Horarios</td>
+          <td>10:00 - 13:00<br>16:00 - 19:00</td>
+          <td>11:00 - 14:00</td>
+        </tr>
+        <tr>
+          <td class="titulo">Tarifas</td>
+          <td>Individual: 85 pesos<br>Grupos: 51 pesos</td>
+          <td>Individual: 18 pesos<br>Grupos: 34 pesos</td>
+        </tr>
+      </table>
+    </div>
+    <div class="tabla">
+      <h3>Aula educativa (sólo grupos):</h3>
+      <table>
+        <tr class="titulo">
+          <td></td>
+          <td>Temporada de verano</td>
+          <td>Temporada de invierno</td>
+        </tr>
+        <tr>
+          <td class="titulo">Horarios</td>
+          <td>9:00 - 10:00<br>15:00 - 16:00</td>
+          <td>10:00 - 11:00</td>
+        </tr>
+        <tr>
+          <td class="titulo">Tarifas</td>
+          <td colspan="2">425 pesos</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2026 Parque Natural Sierra Bicuerca. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

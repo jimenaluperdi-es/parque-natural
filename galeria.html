@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parque Natural Sierra Bicuera</title>
+</head>
+<body>
+  <div id="header-container"></div>
+  <script>
+    fetch("header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("header-container").innerHTML = data;
+      })
+      .catch((error) => console.error("Error al cargar el header:", error));
+  </script>
+  <div id="menu-container"></div>
+  <script>
+    fetch("menu.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("menu-container").innerHTML = data;
+      })
+      .catch((error) => console.error("Error al cargar el menú:", error));
+  </script>
+  <div class="container"></div>
+  <main>
+    <h2>Galería fotografica</h2>
+    <p>Aqui puedes hacerte una idea de lo que encontraras al visitar el parque</p>
+    <div class="gallery">
+      <img src="imagenes/italy.jpg" alt="Vista panorámica del parque">
+      <img src="imagenes/cascada.jpg" alt="Flora del parque">
+      <img src="imagenes/parques.png" alt="Fauna del parque">
+    </div>
+    <p>Te invitamos a llevar tu cámara, aque hagas fotos y nos envies algunas para añadirlas a esta galería.</p>
+  </main>
+</body>
+</html>
