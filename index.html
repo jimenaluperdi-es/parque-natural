@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parque Natural Sierra Bicuera</title>
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error al cargar el header:", error));
+    </script>
+    <div id="menu-container"></div>
+      <script>
+      fetch("menu.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("menu-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error al cargar el menú:", error));
+    </script>
+      <div class="container"></div>
+      <main>
+        <h2>Bienvenidos al Parque Natural Sierra Bicuera</h2>
+        <p>
+          El Parque Natural Sierra Bicuera fue declarado en 1983 y reconocido
+          como reserva de la biosfera. Con una extensión de 9.090 hectáreas,
+          alberga una gran biodiversidad.
+        </p>
+        <p>
+          Entre su flora destacan la carrasca y el pino. En cuanto a fauna, se
+          pueden observar especies como el buitre leonado, el hálcon peregrino,
+          el águila perdicera, el jabalí, el ciervo y el martín pescador.
+        </p>
+      </main>
+    </div>
+    <footer>
+      © 2026 Parque Natural Sierra Bicuera - Todos los derechos reservados
+    </footer>
+  </body>
+</html>
