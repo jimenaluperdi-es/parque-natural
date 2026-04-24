@@ -32,24 +32,11 @@
     <footer>
       © 2026 Parque Natural Sierra Bicuera - Todos los derechos reservados
     </footer>
-    <script>
-      // Cargar Header
-      fetch("header.html")
-        .then((response) => response.text())
-        .then(
-          (data) =>
-            (document.getElementById("header-container").innerHTML = data),
-        )
-        .catch((error) => console.error("Error al cargar el header:", error));
-
-      // Cargar Menú
-      fetch("menu.html")
-        .then((response) => response.text())
-        .then(
-          (data) =>
-            (document.getElementById("menu-container").innerHTML = data),
-        )
-        .catch((error) => console.error("Error al cargar el menú:", error));
-    </script>
+    <!-- Modal para imagen en grande -->
+    <div id="modal-imagen" class="modal">
+      <span class="modal-cerrar">&times;</span>
+      <img class="modal-contenido" id="imagen-ampliada" />
+    </div>
+    <script src="./js.js"></script>
   </body>
 </html>
