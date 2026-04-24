@@ -1,45 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parque Natural Sierra Bicuera</title>
+    <link rel="stylesheet" href="./estilos/estilos.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parque Natural Sierra Bicuera</title>
-  <link rel="stylesheet" href="estilos.css">
-</head>
+  <body>
+    <div id="header-container"></div>
+    <div class="layout-principal">
+      <nav class="columna-menu">
+        <div id="menu-container"></div>
+      </nav>
+      <main class="columna-contenido">
+        <section class="seccion-texto">
+          <h2>Galería fotográfica</h2>
+          <p>
+            Aquí puedes hacerte una idea de lo que encontrarás al visitar el
+            parque.
+          </p>
 
-<body>
-  <div class="layout-principal">    
-    <nav class="columna-menu">
-      <div id="menu-container"></div>
-    </nav>  
-    <main class="columna-contenido">
-      <section class="seccion-texto">
-        <h2>Galería fotográfica</h2>
-        <p>Aquí puedes hacerte una idea de lo que encontrarás al visitar el parque.</p>
-  
-        <div class="gallery">
-          <img src="imagenes/italy.jpg" alt="Vista panorámica">
-          <img src="imagenes/cascada.jpg" alt="Flora">
-          <img src="imagenes/parques.png" alt="Fauna">
-        </div>
-      </section>
-    </main>
-  </div>
-  <script>
-    // Cargar Header
-    fetch("header.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("header-container").innerHTML = data)
-      .catch(error => console.error("Error al cargar el header:", error));
+          <div class="gallery">
+            <img src="imagenes/italy.jpg" alt="Vista panorámica" />
+            <img src="imagenes/cascada.jpg" alt="Flora" />
+            <img src="imagenes/parques.png" alt="Fauna" />
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      © 2026 Parque Natural Sierra Bicuera - Todos los derechos reservados
+    </footer>
+    <script>
+      // Cargar Header
+      fetch("header.html")
+        .then((response) => response.text())
+        .then(
+          (data) =>
+            (document.getElementById("header-container").innerHTML = data),
+        )
+        .catch((error) => console.error("Error al cargar el header:", error));
 
-    // Cargar Menú
-    fetch("menu.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("menu-container").innerHTML = data)
-      .catch(error => console.error("Error al cargar el menú:", error));
-  </script>
-
-</body>
-
+      // Cargar Menú
+      fetch("menu.html")
+        .then((response) => response.text())
+        .then(
+          (data) =>
+            (document.getElementById("menu-container").innerHTML = data),
+        )
+        .catch((error) => console.error("Error al cargar el menú:", error));
+    </script>
+  </body>
 </html>

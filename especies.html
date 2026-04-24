@@ -7,23 +7,11 @@
   </head>
   <body>
     <div id="header-container"></div>
-    <script>
-      fetch("header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header-container").innerHTML = data;
-        })
-        .catch((error) => console.error("Error al cargar el header:", error));
-    </script>
-    <div id="menu-container"></div>
-      <script>
-      fetch("menu.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("menu-container").innerHTML = data;
-        })
-        .catch((error) => console.error("Error al cargar el menú:", error));
-    </script>
+    <div class="layout-principal">
+      <nav class="columna-menu">
+        <div id="menu-container"></div>
+      </nav>
+     
       <div class="contenedor">
             <h2>Especies del Parque</h2>
         <div class="contenido">
@@ -40,8 +28,23 @@
                 <img src="./imagenes/nutria.png" alt="Nutria europea en su hábitat natural con hierba y follaje verde" title="Nutria europea (Lutra lutra)">
             </div>
         </div>
+    </div></div>
     </div>
-    </div>
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error al cargar el header:", error));
+  
+      fetch("menu.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("menu-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error al cargar el menú:", error));
+    </script>
     <footer>
       © 2026 Parque Natural Sierra Bicuera - Todos los derechos reservados
     </footer>
