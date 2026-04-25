@@ -48,3 +48,43 @@ document.querySelectorAll(".animal").forEach((animal) => {
     imgElement.style.display = "block";
   });
 });
+
+///////////////////////////////////////////////////////////////////////
+// para las imagenes del carrusel
+const imagenes = [
+  "./imagenes/aviso.jpg",
+  "./imagenes/nutria.png",
+  "./imagenes/buitre.jpg",
+  "./imagenes/gineta.jpg",
+  "./imagenes/patoso.png"
+];
+
+let indice = 0;
+
+const texto = document.getElementById("texto-inicial");
+const img = document.getElementById("imagen-ampliada");
+const btn = document.getElementById("btn-siguiente");
+
+texto.addEventListener("click", () => {
+
+  // 🔥 ocultar texto
+  texto.style.display = "none";
+
+  // mostrar imagen y botón
+  img.style.display = "block";
+  btn.style.display = "inline-block";
+
+  // primera imagen
+  indice = 0;
+  img.src = imagenes[indice];
+});
+
+btn.addEventListener("click", () => {
+  indice++;
+
+  if (indice >= imagenes.length) {
+    indice = 0;
+  }
+
+  img.src = imagenes[indice];
+});

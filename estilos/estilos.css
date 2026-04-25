@@ -5,10 +5,13 @@ body {
 }
 
 .contenedor,
-.contenido {
-  width: 600px;
-  margin: 20px auto;
-  margin-left: 10px;
+.contenido {  
+  border: 1px solid #d0d0d0;
+  background-color: #fafafa;
+  padding: 20px;
+  width: 85%;
+  margin: 30px auto;
+  font-family: Georgia, serif;
 }
 
 h1 {
@@ -123,8 +126,15 @@ th {
 }
 
 .menu-lateral {
-  width: 180px;
-  flex-shrink: 0;
+  height: 100vh;
+  border-right: 2px solid #ccc;
+  padding-top: 0;
+}
+
+.menu-lateral ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 footer {
@@ -145,7 +155,7 @@ footer {
 
 .gallery img {
   width: 100%;
-  height: 200px; /* Altura fija para uniformidad */
+  height: 300px; /* Altura fija para uniformidad */
   object-fit: cover; /* Recorta la imagen para llenar el espacio */
   border-radius: 8px;
   cursor: pointer;
@@ -202,16 +212,67 @@ footer {
   flex: 1;
 }
 
-.imagen-destacada {
-  flex: 1;
-  min-height: 200px;
-  display: flex;
-  align-items: center;
-}
-
 #imagen-ampliada {
   max-width: 170%;
   max-height: 90%;
   border-radius: 8px;
   object-fit: cover;
 }
+
+#header-container{
+  border-bottom: 2px solid #ccc;
+}
+
+.imagen-destacada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 3px solid #333;
+  min-height: 300px;
+  flex: 1;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+/* Texto inicial */
+.texto-click {
+  cursor: pointer;
+  font-size: 18px;
+  color: #222;
+  background: #f0f0f0;
+  padding: 12px 18px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+}
+
+.texto-click:hover {
+  background: #e6e6e6;
+}
+
+#imagen-ampliada {
+  width: 200%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: 2px solid #ddd;
+}
+
+.contenido-especies {
+  display: flex;
+  gap: 20px;
+}
+
+.animales-lista {
+  width: 60%;
+}
+
+.imagen-destacada {
+  width: 60%;
+}
+
+
