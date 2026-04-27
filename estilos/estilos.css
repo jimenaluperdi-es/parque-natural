@@ -213,10 +213,10 @@ footer {
 }
 
 #imagen-ampliada {
-  max-width: 170%;
-  max-height: 90%;
+  max-width: 95vw;  
+  max-height: 90vh; 
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: contain;  
 }
 
 #header-container {
