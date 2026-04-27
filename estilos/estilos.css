@@ -5,13 +5,13 @@ body {
 }
 
 .contenedor,
-.contenido {  
+.contenido {
   border: 1px solid #d0d0d0;
   background-color: #fafafa;
   padding: 20px;
   width: 85%;
   margin: 30px auto;
-  font-family: Georgia, serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -219,7 +219,7 @@ footer {
   object-fit: cover;
 }
 
-#header-container{
+#header-container {
   border-bottom: 2px solid #ccc;
 }
 
@@ -274,5 +274,3 @@ footer {
 .imagen-destacada {
   width: 60%;
 }
-
-
