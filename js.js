@@ -90,5 +90,9 @@ btn.addEventListener("click", () => {
 
 function pinta() {
   const body = document.querySelector("body");
-  body.style.backgroundColor = "purple";
+  if (body.style.backgroundColor == "purple") {
+    body.style.backgroundColor = "white";
+  } else {
+    body.style.backgroundColor = "purple";
+  }
 }
