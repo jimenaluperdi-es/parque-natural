@@ -96,3 +96,25 @@ function pinta() {
     body.style.backgroundColor = "white";
   }
 }
+
+
+const btnMenu = document.querySelector(".btn-menu");
+function cambiarColor() {
+  const body = document.body;
+  body.style.backgroundColor = "darkseagreen";
+  const menuLateral = document.querySelector(".menu-lateral");
+  menuLateral.style.backgroundColor = "darkseagreen";
+  const contenido = document.querySelector(".contenido");
+  contenido.style.fontFamily = "cursive";
+  contenido.style.color = "blue";
+  contenido.style.backgroundColor = "lightyellow";  
+}  
+
+function pinta() {
+  const body = document.querySelector("body");
+  if (body.style.backgroundColor != "purple") {
+    body.style.backgroundColor = "purple";
+  } else {
+    body.style.backgroundColor = "white";
+  }
+}
