@@ -88,3 +88,15 @@ btn.addEventListener("click", () => {
 
   img.src = imagenes[indice];
 });
+
+const btnMenu = document.querySelector(".btn-menu");
+function cambiarColor() {
+  const body = document.body;
+  body.style.backgroundColor = "darkseagreen";
+  const menuLateral = document.querySelector(".menu-lateral");
+  menuLateral.style.backgroundColor = "darkseagreen";
+  const contenido = document.querySelector(".contenido");
+  contenido.style.fontFamily = "cursive";
+  contenido.style.color = "blue";
+  contenido.style.backgroundColor = "lightyellow";  
+}  
