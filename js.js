@@ -56,7 +56,7 @@ const imagenes = [
   "./imagenes/nutria.png",
   "./imagenes/buitre.jpg",
   "./imagenes/gineta.jpg",
-  "./imagenes/patoso.png"
+  "./imagenes/patoso.png",
 ];
 
 let indice = 0;
@@ -66,7 +66,6 @@ const img = document.getElementById("imagen-ampliada");
 const btn = document.getElementById("btn-siguiente");
 
 texto.addEventListener("click", () => {
-
   // 🔥 ocultar texto
   texto.style.display = "none";
 
@@ -89,6 +88,16 @@ btn.addEventListener("click", () => {
   img.src = imagenes[indice];
 });
 
+function pinta() {
+  const body = document.querySelector("body");
+  if (body.style.backgroundColor != "purple") {
+    body.style.backgroundColor = "purple";
+  } else {
+    body.style.backgroundColor = "white";
+  }
+}
+
+
 const btnMenu = document.querySelector(".btn-menu");
 function cambiarColor() {
   const body = document.body;
@@ -100,3 +109,12 @@ function cambiarColor() {
   contenido.style.color = "blue";
   contenido.style.backgroundColor = "lightyellow";  
 }  
+
+function pinta() {
+  const body = document.querySelector("body");
+  if (body.style.backgroundColor != "purple") {
+    body.style.backgroundColor = "purple";
+  } else {
+    body.style.backgroundColor = "white";
+  }
+}
