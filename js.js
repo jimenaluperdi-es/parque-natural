@@ -89,6 +89,7 @@ btn.addEventListener("click", () => {
 });
 
 const btnMenu = document.querySelector(".btn-menu");
+const currentTheme = localStorage.getItem("theme");
 function cambiarColor() {
   const body = document.body;
   body.style.backgroundColor = "darkseagreen";

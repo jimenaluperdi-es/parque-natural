@@ -3,6 +3,13 @@ body {
   margin-left: 5%;
   margin-right: 5%;
   background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
 }
 
 .contenedor,
