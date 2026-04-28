@@ -56,7 +56,7 @@ const imagenes = [
   "./imagenes/nutria.png",
   "./imagenes/buitre.jpg",
   "./imagenes/gineta.jpg",
-  "./imagenes/patoso.png"
+  "./imagenes/patoso.png",
 ];
 
 let indice = 0;
@@ -66,7 +66,6 @@ const img = document.getElementById("imagen-ampliada");
 const btn = document.getElementById("btn-siguiente");
 
 texto.addEventListener("click", () => {
-
   // 🔥 ocultar texto
   texto.style.display = "none";
 
@@ -88,3 +87,8 @@ btn.addEventListener("click", () => {
 
   img.src = imagenes[indice];
 });
+
+function pinta() {
+  const body = document.querySelector("body");
+  body.style.backgroundColor = "purple";
+}
