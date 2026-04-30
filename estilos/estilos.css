@@ -235,7 +235,8 @@ th {
 }
 
 #header-container {
-  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  /* border-bottom: 2px solid #ccc; */
 }
 
 .imagen-destacada {
