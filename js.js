@@ -113,3 +113,17 @@ function pinta() {
 
 }
 
+const btn = document.getElementById("btn-tema");
+
+btn.addEventListener("click", () => {
+  const html = document.documentElement;
+  const tema = html.getAttribute("data-bs-theme");
+
+  if (tema === "dark") {
+    html.setAttribute("data-bs-theme", "light");
+    btn.textContent = "🌙 Modo oscuro";
+  } else {
+    html.setAttribute("data-bs-theme", "dark");
+    btn.textContent = "☀️ Modo claro";
+  }
+});
