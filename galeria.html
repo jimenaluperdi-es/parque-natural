@@ -1,81 +1,143 @@
 <!doctype html>
 <html lang="es">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parque Natural Sierra Bicuera</title>
-  <!-- Bootstrap 5.3.2 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    /* Ajuste para que el menú vertical ocupe el alto total en pantallas grandes */
-    @media (min-width: 992px) {
-      .sidebar {
-        min-height: 100vh;
-        border-right: 1px solid #dee2e6;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parque Natural Sierra Bicuera</title>
+    <!-- Bootstrap 5.3.2 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      /* Ajuste para que el menú vertical ocupe el alto total en pantallas grandes */
+      @media (min-width: 992px) {
+        .sidebar {
+          min-height: 100vh;
+          border-right: 1px solid #dee2e6;
+        }
       }
-    }
-  </style>
-</head>
+    </style>
+    <link rel="stylesheet" href="./estilos/estilos.css" />
+  </head>
 
-<body>
-  <div id="header-container"></div>
+  <body>
+    <div id="header-container"></div>
 
-  <div cclass="container-fluid my-4">
-    <div class="row">
-      <!-- Menú lateral -->
-      <nav class="col-12 col-md-3 col-lg-2 mb-4">
-        <div id="menu-container" class="bg-light p-3 rounded shadow-sm h-100"></div>
-      </nav>
-      <main class="col-lg-9 col-xl-10 p-0">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-              <img src="imagenes/italy.jpg" class="d-block w-100" alt="El mejor paisaje"
-                style="height: 60vh; object-fit: cover;">
+    <div cclass="container-fluid my-4">
+      <div class="row">
+        <!-- Menú lateral -->
+        <nav class="col-12 col-md-3 col-lg-2 mb-4">
+          <div
+            id="menu-container"
+            class="bg-light p-3 rounded shadow-sm h-100"
+          ></div>
+        </nav>
+        <main class="col-lg-9 col-xl-10 p-0">
+          <div
+            id="carouselExampleInterval"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img
+                  src="imagenes/italy.jpg"
+                  class="d-block w-100"
+                  alt="El mejor paisaje"
+                  style="height: 60vh; object-fit: cover"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  src="imagenes/cascada.jpg"
+                  class="d-block w-100"
+                  alt="Cascada"
+                  style="height: 60vh; object-fit: cover"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="imagenes/parques.png"
+                  class="d-block w-100"
+                  alt="Parque Natural"
+                  style="height: 60vh; object-fit: cover"
+                />
+              </div>
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <img src="imagenes/cascada.jpg" class="d-block w-100" alt="Cascada"
-                style="height: 60vh; object-fit: cover;">
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+          <footer class="text-center bg-light mt-4">
+            <div class="container pt-4">
+              <section class="mb-4">
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_ES"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://x.com/?lang=es"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://www.google.com/?hl=es"
+                  ><i class="fab fa-google"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://www.instagram.com/?hl=es"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://www.linkedin.com/home"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://github.com/"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </section>
             </div>
-            <div class="carousel-item">
-              <img src="imagenes/parques.png" class="d-block w-100" alt="Parque Natural"
-                style="height: 60vh; object-fit: cover;">
+            <div class="text-center p-3 bg-body-secondary">
+              © 2026 - Parque Natural Sierra Bicuera
             </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
-        </div>
-        <footer class="text-center bg-light mt-4">
-          <div class="container pt-4">
-            <section class="mb-4">
-              <a class="btn btn-outline-dark btn-floating m-1" href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_ES"><i class="fab fa-facebook-f"></i></a>
-              <a class="btn btn-outline-dark btn-floating m-1" href="https://x.com/?lang=es"><i class="fab fa-twitter"></i></a>
-              <a class="btn btn-outline-dark btn-floating m-1" href="https://www.google.com/?hl=es"><i class="fab fa-google"></i></a>
-              <a class="btn btn-outline-dark btn-floating m-1" href="https://www.instagram.com/?hl=es"><i class="fab fa-instagram"></i></a>
-              <a class="btn btn-outline-dark btn-floating m-1" href="https://www.linkedin.com/home"><i class="fab fa-linkedin"></i></a>
-              <a class="btn btn-outline-dark btn-floating m-1" href="https://github.com/"><i class="fab fa-github"></i></a>
-            </section>
-          </div>
-          <div class="text-center p-3 bg-body-secondary">
-            © 2026 - Parque Natural Sierra Bicuera
-          </div>
-        </footer>
-      </main>
+          </footer>
+        </main>
+      </div>
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js.js"></script>
+  </body>
 </html>
