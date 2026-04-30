@@ -88,18 +88,8 @@ btn.addEventListener("click", () => {
   img.src = imagenes[indice];
 });
 
-function pinta() {
-  const body = document.querySelector("body");
-  if (body.style.backgroundColor != "purple") {
-    body.style.backgroundColor = "purple";
-  } else {
-    body.style.backgroundColor = "white";
-  }
-}
-
-
 const btnMenu = document.querySelector(".btn-menu");
-const currentTheme = localStorage.getItem('theme');
+const currentTheme = localStorage.getItem("theme");
 function cambiarColor() {
   const body = document.body;
   body.style.backgroundColor = "darkseagreen";
@@ -108,22 +98,18 @@ function cambiarColor() {
   const contenido = document.querySelector(".contenido");
   contenido.style.fontFamily = "cursive";
   contenido.style.color = "blue";
-  contenido.style.backgroundColor = "lightyellow"; 
-
-}  
-
+  contenido.style.backgroundColor = "lightyellow";
+}
 
 function pinta() {
-  const cuerpo = document.body;
-  cuerpo.classList.toggle("dark-mode");
-
-   const esOscuro = cuerpo.classList.contains("dark-mode");
-  localStorage.setItem("theme", esOscuro ? "dark" : "light");
+  const body = document.querySelector("body");
   const menuLateral = document.querySelector(".menu-lateral");
-  menuLateral.style.backgroundColor = "darklight";
+  menuLateral.style.backgroundColor = "darkseagreen";
   const contenido = document.querySelector(".contenido");
   contenido.style.fontFamily = "gotic";
   contenido.style.color = "blue";
   contenido.style.backgroundColor = "lightyellow"; 
+
+
 }
 
