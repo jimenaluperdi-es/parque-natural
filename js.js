@@ -104,11 +104,12 @@ function cambiarColor() {
 function pinta() {
   const body = document.querySelector("body");
   const menuLateral = document.querySelector(".menu-lateral");
-  if (body.style.backgroundColor != "purple") {
-    body.style.backgroundColor = "purple";
-    menuLateral.style.backgroundColor = "purple";
-  } else {
-    body.style.backgroundColor = "white";
-    menuLateral.style.backgroundColor = "white";
-  }
+  menuLateral.style.backgroundColor = "darkseagreen";
+  const contenido = document.querySelector(".contenido");
+  contenido.style.fontFamily = "gotic";
+  contenido.style.color = "blue";
+  contenido.style.backgroundColor = "lightyellow"; 
+
+
 }
+
