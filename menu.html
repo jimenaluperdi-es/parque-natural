@@ -1,15 +1,21 @@
-<nav class="menu-lateral">
-  <ul>
-    <li><a href="index.html" class="btn-menu active">Inicio</a></li>
-    <li><a href="especies.html" class="btn-menu">Especies</a></li>
-    <li><a href="reservas.html" class="btn-menu">Reservas</a></li>
-    <li><a href="galeria.html" class="btn-menu">Galeria</a></li>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuVertical"
+  aria-controls="menuVertical">
+  <span class="navbar-toggler-icon"></span> Abrir Menú
+</button>
 
-    <li><a href="#" class="btn-menu" onclick="cambiarColor()">Modificar color</a></li>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="menuVertical" aria-labelledby="menuVerticalLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="menuVerticalLabel">Reserva Natural de Bicuerca</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+      <li class="nav-item"><a class="nav-link" href="especies.html">Especies</a></li>
+      <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+      <li class="nav-item"><a class="nav-link" href="galeria.html">Galeria</a></li>
+    </ul>
+  </div>
+</div>
 
-    <li>
-      <a onclick="pinta()" class="btn-menu magia-potagia">To Morao!</a>
-    </li>
 
-  </ul>
-</nav>

@@ -120,11 +120,10 @@ function pinta() {
    const esOscuro = cuerpo.classList.contains("dark-mode");
   localStorage.setItem("theme", esOscuro ? "dark" : "light");
   const menuLateral = document.querySelector(".menu-lateral");
-  menuLateral.style.backgroundColor = "darkseagreen";
+  menuLateral.style.backgroundColor = "darklight";
   const contenido = document.querySelector(".contenido");
   contenido.style.fontFamily = "gotic";
   contenido.style.color = "blue";
   contenido.style.backgroundColor = "lightyellow"; 
-
-
 }
+
