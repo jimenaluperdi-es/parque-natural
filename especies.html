@@ -3,39 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <title>Parque Natural Sierra Bicuera</title>
-    <link rel="stylesheet" href="./estilos/estilos.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./estilos/estilos.css" />
   </head>
   <body>
     <div id="header-container"></div>
-
     <div class="layout-principal">
       <nav class="columna-menu">
         <div id="menu-container"></div>
       </nav>
       <div class="contenedor">
         <h2>Especies del Parque</h2>
-        <div class="contenido-especies">
+        <div class="contenido contenido-especies">
           <div class="animales-lista">
-            <div class="animal" data-img="nutria.png">
+            <div class="animal cursor-pointer" data-img="nutria.png">
               <h3>Nutria</h3>
-              <p>La nutria europea o paleártica (<em>Lutra lutra</em>) es un mamífero semiacuático...</p>
+              <p>
+                La nutria europea o paleártica (<em>Lutra lutra</em>) es un
+                mamífero semiacuático...
+              </p>
             </div>
-            <div class="animal" data-img="buitre.jpg">
+            <div class="animal cursor-pointer" data-img="buitre.jpg">
               <h3>Buitre leonado</h3>
-              <p>El buitre leonado (<em>Gyps fulvus</em>) es una ave rapaz carroñera...</p>
+              <p>
+                El buitre leonado (<em>Gyps fulvus</em>) es una ave rapaz
+                carroñera...
+              </p>
             </div>
-            <div class="animal" data-img="gineta.jpg">
+            <div class="animal cursor-pointer" data-img="gineta.jpg">
               <h3>Gineta</h3>
-              <p>La gineta (<em>Genetta genetta</em>) es un mamífero carnívoro...</p>
+              <p>
+                La gineta (<em>Genetta genetta</em>) es un mamífero carnívoro...
+              </p>
             </div>
-            <div class="animal" data-img="patoso.png">
+            <div class="animal cursor-pointer" data-img="patoso.png">
               <h3>Patoso</h3>
-              <p>Conocido por su sonada existencia, el Patoso es uno de los experimentos más llamativos...</p>
+              <p>
+                Conocido por su sonada existencia, el Patoso es uno de los
+                experimentos más llamativos...
+              </p>
             </div>
-          </div>         
+          </div>
           <div class="imagen-destacada">
-            <p id="texto-inicial" class="texto-click">Haz clic para ver la imagen</p>
-              <img id="imagen-ampliada" src="./imagenes/nutria.png" alt="Imagen del animal" style="display:none;">
+            <!-- <p id="texto-inicial" class="texto-click">
+              Haz clic para ver la imagen
+            </p> -->
+            <img
+              id="imagen-ampliada"
+              src="./imagenes/nutria.png"
+              alt="Imagen del animal"
+            />
           </div>
         </div>
       </div>

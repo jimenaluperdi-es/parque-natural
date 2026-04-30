@@ -289,3 +289,7 @@ th {
 .imagen-destacada {
   width: 60%;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
