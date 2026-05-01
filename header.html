@@ -1,9 +1,28 @@
-<img
-  class="header-img"
-  src="imagenes/parques-naturales.png"
-  alt="Parque Natural Sierra Bicuerca"
-/>
-<p></p>
-<h1 class="h1first">
-  Parque Natural <span class="h1second">Sierra Bicuera</span>
-</h1>
+<header class="container-fluid p-0 position-relative text-center overflow-hidden" style="height: 260px;">
+
+  <!-- Imagen -->
+  <img 
+    src="./imagenes/parques-naturales.png" 
+    class="w-100 h-100 object-fit-cover" 
+    alt="Parque Natural Sierra Bicuera"
+  >
+
+  <!-- Overlay oscuro degradado -->
+  <div class="position-absolute top-0 start-0 w-100 h-100"
+       style="background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));">
+  </div>
+
+  <!-- Texto -->
+  <div class="position-absolute top-50 start-50 translate-middle text-white px-3">
+    <h1 class="fw-bold display-5 mb-2">
+      Parque Natural
+    </h1>
+    <h2 class="fw-light text-warning">
+      Sierra Bicuera
+    </h2>
+    <p class="small opacity-75 mb-0">
+      Naturaleza en estado puro
+    </p>
+  </div>
+
+</header>

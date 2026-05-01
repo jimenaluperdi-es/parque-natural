@@ -2,111 +2,175 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Parque Natural Sierra Bicuera</title>
+    <title>Especies - Sierra Bicuera</title>
+
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
     />
-    <!-- Font Awesome -->
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
     <link rel="stylesheet" href="./estilos/estilos.css" />
   </head>
-  <body>
-    <div id="header-container"></div>
-    <div class="layout-principal">
-      <nav class="columna-menu">
-        <div id="menu-container"></div>
-      </nav>
-      <div class="contenedor">
-        <h2>Especies del Parque</h2>
-        <div class="contenido contenido-especies">
-          <div class="animales-lista">
-            <div class="animal cursor-pointer" data-img="nutria.png">
-              <h3>Nutria</h3>
-              <p>
-                La nutria europea o paleártica (<em>Lutra lutra</em>) es un
-                mamífero semiacuático...
-              </p>
-            </div>
-            <div class="animal cursor-pointer" data-img="buitre.jpg">
-              <h3>Buitre leonado</h3>
-              <p>
-                El buitre leonado (<em>Gyps fulvus</em>) es una ave rapaz
-                carroñera...
-              </p>
-            </div>
-            <div class="animal cursor-pointer" data-img="gineta.jpg">
-              <h3>Gineta</h3>
-              <p>
-                La gineta (<em>Genetta genetta</em>) es un mamífero carnívoro...
-              </p>
-            </div>
-            <div class="animal cursor-pointer" data-img="patoso.png">
-              <h3>Patoso</h3>
-              <p>
-                Conocido por su sonada existencia, el Patoso es uno de los
-                experimentos más llamativos...
-              </p>
-            </div>
+
+  <body class="bg-light">
+
+    <!-- HEADER -->
+    <div id="header-container" class="container-fluid p-0"></div>
+
+    <!-- LAYOUT -->
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- MENÚ -->
+        <nav class="col-md-3 col-lg-2 bg-white border-end min-vh-100 p-3">
+          <div id="menu-container"></div>
+        </nav>
+
+        <!-- CONTENIDO -->
+        <main class="col-md-9 col-lg-10 p-5">
+
+          <!-- TÍTULO -->
+          <div class="mb-4">
+            <h2 class="fw-bold">
+              <i class="fas fa-paw text-success me-2"></i>
+              Especies del Parque
+            </h2>
+            <p class="text-muted">
+              Haz clic en una especie para ver su imagen
+            </p>
           </div>
-          <div class="imagen-destacada">
-            <!-- <p id="texto-inicial" class="texto-click">
-              Haz clic para ver la imagen
-            </p> -->
-            <img
-              id="imagen-ampliada"
-              src="./imagenes/nutria.png"
-              alt="Imagen del animal"
-            />
+
+          <div class="row g-4">
+
+            <!-- LISTA -->
+            <div class="col-lg-6">
+
+              <div class="list-group shadow-sm">
+
+                <div class="list-group-item list-group-item-action animal cursor-pointer" data-img="nutria.png">
+                  <h5 class="mb-1">Nutria</h5>
+                  <p class="mb-0 text-muted small">
+                    <em>La nutria europea o paleátrica (Lutra lutra) es un mamífero semiacuático carnivoro de hábitat acuático acuático. Se alimenta de peces, ranas y pequeñas presas de caza en el río. Cerca de sus lugares de cobijo, podremos ver toboganes que crean para llegar rapidamente al agua.</em> — Mamífero semiacuático
+                  </p>
+                </div>
+
+                <div class="list-group-item list-group-item-action animal cursor-pointer" data-img="buitre.jpg">
+                  <h5 class="mb-1">Buitre leonado</h5>
+                  <p class="mb-0 text-muted small">
+                    <em>El buitre leonado (Gyps fulvus) es un ave rapaz, una de las mayores que puede encontrarse en la Península Ibérica. Su alimentación principal es la carroña, que localiza con su aguda vista.</em> — Ave carroñera
+                  </p>
+                </div>
+
+                <div class="list-group-item list-group-item-action animal cursor-pointer" data-img="gineta.jpg">
+                  <h5 class="mb-1">Gineta</h5>
+                  <p class="mb-0 text-muted small">
+                    <em>La guineta (Genetta genetta) es una especie de mamífero carnívoro. Son grandes trepadoras, muy agiles y grandes cazadoras de pequeños animales. Aunque tambien se alimentan de los frutos del bosque que se pueden encontrar en el parque.</em> — Mamífero carnívoro
+                  </p>
+                </div>
+
+                <div class="list-group-item list-group-item-action animal cursor-pointer" data-img="patoso.png">
+                  <h5 class="mb-1">El oso</h5>
+                  <p class="mb-0 text-muted small">
+                    <em>El oso (Ursus arctos) es un mamífero omnívoro de gran tamaño. Es conocido por su fuerza y capacidad de adaptación a diversos entornos. Se alimenta de una variedad de alimentos, incluyendo frutas, bayas, peces y presas.</em> — Mamífero omnívoro
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- IMAGEN -->
+            <div class="col-lg-6 text-center">
+
+              <div class="card shadow-sm border-0">
+                <div class="card-body p-2">
+
+                  <img
+                    id="imagen-ampliada"
+                    src="./imagenes/nutria.png"
+                    class="img-fluid rounded"
+                    alt="Imagen del animal"
+                  />
+
+                </div>
+              </div>
+
+            </div>
+
           </div>
-        </div>
+
+        </main>
+
       </div>
     </div>
-    <footer class="text-center bg-light mt-4">
-      <div class="container pt-4">
-        <section class="mb-4">
-          <a
-            class="btn btn-outline-dark btn-floating m-1"
-            href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_ES"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a
-            class="btn btn-outline-dark btn-floating m-1"
-            href="https://x.com/?lang=es"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a
-            class="btn btn-outline-dark btn-floating m-1"
-            href="https://www.google.com/?hl=es"
-            ><i class="fab fa-google"></i
-          ></a>
-          <a
-            class="btn btn-outline-dark btn-floating m-1"
-            href="https://www.instagram.com/?hl=es"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a
-            class="btn btn-outline-dark btn-floating m-1"
-            href="https://www.linkedin.com/home"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <a
-            class="btn btn-outline-dark btn-floating m-1"
-            href="https://github.com/"
-            ><i class="fab fa-github"></i
-          ></a>
-        </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center bg-white border-top mt-5">
+
+      <div class="container py-4">
+
+        <div class="mb-3">
+          <a class="btn btn-outline-dark btn-floating m-1"
+                  href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_ES"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://x.com/?lang=es"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://www.google.com/?hl=es"
+                  ><i class="fab fa-google"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://www.instagram.com/?hl=es"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://www.linkedin.com/home"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://github.com/"
+                  ><i class="fab fa-github"></i
+                ></a>
+        </div>
+
+        <small class="text-muted">
+          © 2026 - Parque Natural Sierra Bicuera
+        </small>
+
       </div>
-      <div class="text-center p-3 bg-body-secondary">
-        © 2026 - Parque Natural Sierra Bicuera
-      </div>
+
     </footer>
+
+    <!-- JS -->
+    <script>
+      fetch("./header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-container").innerHTML = data;
+        });
+
+      fetch("./menu.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("menu-container").innerHTML = data;
+        });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js.js"></script>
+
   </body>
 </html>

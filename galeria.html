@@ -1,110 +1,132 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-bs-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Parque Natural Sierra Bicuera</title>
-    <!-- Bootstrap 5.3.2 -->
+
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <style>
-      /* Ajuste para que el menú vertical ocupe el alto total en pantallas grandes */
-      @media (min-width: 992px) {
-        .sidebar {
-          min-height: 100vh;
-          border-right: 1px solid #dee2e6;
-        }
-      }
-    </style>
+
     <link rel="stylesheet" href="./estilos/estilos.css" />
   </head>
 
-  <body>
-    <div id="header-container"></div>
+  <body class="bg-light">
 
-    <div class="container-fluid my-4">
-      <div class="container-fluid text-end py-2">
-        <button class="btn btn-outline-secondary" id="btn-tema">
-          🌙 Modo oscuro
-        </button>
-      </div>
+    <!-- HEADER -->
+    <div id="header-container" class="container-fluid p-0"></div>
+
+       <!-- LAYOUT -->
+    <div class="container-fluid">
       <div class="row">
-        <!-- Menú lateral -->
-        <nav class="col-12 col-md-3 col-lg-2 mb-4">
-          <div id="menu-container" class="bg-light p-3 rounded shadow-sm h-100"></div>
+
+        <!-- MENÚ -->
+        <nav class="col-md-3 col-lg-2 bg-white border-end min-vh-100 p-3">
+          <div id="menu-container"></div>
         </nav>
-        <main class="col-lg-9 col-xl-10 p-0">
-          <div
-            id="carouselExampleInterval"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000">
-                <img
-                  src="imagenes/italy.jpg"
-                  class="d-block w-100"
-                  alt="El mejor paisaje"
-                  style="height: 60vh; object-fit: cover"
-                />
-              </div>
-              <div class="carousel-item" data-bs-interval="2000">
-                <img
-                  src="imagenes/cascada.jpg"
-                  class="d-block w-100"
-                  alt="Cascada"
-                  style="height: 60vh; object-fit: cover"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="imagenes/parques.png"
-                  class="d-block w-100"
-                  alt="Parque Natural"
-                  style="height: 60vh; object-fit: cover"
-                />
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleInterval"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleInterval"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Siguiente</span>
-            </button>
+
+        <!-- CONTENIDO -->
+        <main class="col-md-9 col-lg-10 p-0">
+
+          <!-- TITULO -->
+          <div class="p-4 pb-2">
+            <h2 class="fw-bold">
+              <i class="fas fa-image text-success me-2"></i>
+              Galería del Parque
+            </h2>
+            <p class="text-muted">
+              Descubre algunos de los paisajes más representativos
+            </p>
           </div>
-          <footer class="text-center bg-light mt-4">
-            <div class="container pt-4">
-              <section class="mb-4">
-                <a
-                  class="btn btn-outline-dark btn-floating m-1"
-                  href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_ES"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
+
+          <!-- CARRUSEL -->
+          <div class="px-4">
+
+            <div id="carouselExampleInterval" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
+
+              <div class="carousel-inner">
+
+                <div class="carousel-item active" data-bs-interval="5000">
+                  <img
+                    src="imagenes/italy.jpg"
+                    class="d-block w-100"
+                    style="height: 65vh; object-fit: cover;"
+                    alt="Paisaje natural"
+                  />
+                </div>
+
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img
+                    src="imagenes/cascada.jpg"
+                    class="d-block w-100"
+                    style="height: 65vh; object-fit: cover;"
+                    alt="Cascada"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="imagenes/parques.png"
+                    class="d-block w-100"
+                    style="height: 65vh; object-fit: cover;"
+                    alt="Parque Natural"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="imagenes/cata.jpeg"
+                    class="d-block w-100"
+                    style="height: 65vh; object-fit: cover;"
+                    alt="Parque Natural"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="imagenes/5barricas.jpg"
+                    class="d-block w-100"
+                    style="height: 65vh; object-fit: cover;"
+                    alt="Parque Natural"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="imagenes/43914648Master.jpg"
+                    class="d-block w-100"
+                    style="height: 65vh; object-fit: cover;"
+                    alt="Parque Natural"
+                  />
+                </div>
+
+              </div>
+
+              <!-- CONTROLES -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+
+            </div>
+
+          </div>
+        </main>
+        <!-- FOOTER -->
+          <footer class="text-center bg-white border-top mt-5">
+
+            <div class="container py-4">
+
+              <div class="mb-3">
                 <a
                   class="btn btn-outline-dark btn-floating m-1"
                   href="https://x.com/?lang=es"
@@ -129,17 +151,37 @@
                   class="btn btn-outline-dark btn-floating m-1"
                   href="https://github.com/"
                   ><i class="fab fa-github"></i
-                ></a>
-              </section>
+                ></a>  
+              </div>
+
+              <small class="text-muted">
+                © 2026 - Parque Natural Sierra Bicuera
+              </small>
+
             </div>
-            <div class="text-center p-3 bg-body-secondary">
-              © 2026 - Parque Natural Sierra Bicuera
-            </div>
+
           </footer>
-        </main>
+
       </div>
     </div>
+
+    <!-- JS -->
+    <script>
+      fetch("./header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-container").innerHTML = data;
+        });
+
+      fetch("./menu.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("menu-container").innerHTML = data;
+        });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js.js"></script>
+
   </body>
 </html>

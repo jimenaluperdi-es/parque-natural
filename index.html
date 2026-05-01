@@ -5,85 +5,127 @@
     <title>Parque Natural Sierra Bicuera</title>
 
     <link rel="stylesheet" href="./estilos/estilos.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
-  <body>
-    <div id="header-container" class="container"></div>
-    <div class="layout-principal">
-      <nav class="columna-menu">
-        <div id="menu-container"></div>
-      </nav>
-      <div class="contenedor">
-        <h2>Bienvenidos al Parque Natural</h2>
-        <div class="contenido">
-          <p>
-            El Parque Natural Sierra Bicuera, reserva de la biosfera, es
-            referencia obligada del bosque y matorral mediterráneo interior, y
-            hábitat de flora y fauna autoctona.
-          </p>
-          <p>
-            Fue declarado parque natural en 1983, con una superficie de 9.090
-            Has. siendo uno de los enclaves más extensos de la Comunidad
-            Valenciana. Con un gran espesor de vegetación, y varios riachuelos
-            ofrecen un clima ideal para las especies terrestres y acuáticas. Sus
-            bosques, de carrasca y pino albergan una amplia colonia de aves.
-          </p>
-          <p>
-            Entre su flora destacan la carrasca y el pino. En cuanto a fauna, se
-            pueden observar especies como el buitre leonado, el hálcon
-            peregrino, el águila perdicera, el jabalí, el ciervo y el martín
-            pescador.
-          </p>
-        </div>
+
+  <body class="bg-light">
+
+    <!-- HEADER -->
+    <div id="header-container" class="container-fluid p-0"></div>
+
+    <!-- LAYOUT -->
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- MENÚ -->
+        <nav class="col-md-3 col-lg-2 bg-white border-end min-vh-100 p-3">
+          <div id="menu-container"></div>
+        </nav>
+
+        <!-- CONTENIDO -->
+        <main class="col-md-9 col-lg-10 p-5">
+
+          <!-- TÍTULO -->
+          <div class="mb-4">
+            <h2 class="fw-bold">
+              <i class="fas fa-tree text-success me-2"></i>
+              Bienvenidos al Parque Natural
+            </h2>
+            <p class="text-muted">
+              Un espacio protegido de gran valor ecológico en la Comunidad Valenciana
+            </p>
+          </div>
+
+          <!-- CARD PRINCIPAL -->
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+
+              <p class="card-text">
+                El Parque Natural Sierra Bicuera, reserva de la biosfera, es referencia obligada del bosque y matorral mediterráneo interior, y hábitat de flora y fauna autóctona.
+              </p>
+
+              <p class="card-text">
+                Fue declarado parque natural en 1983, con una superficie de 9.090 Has., siendo uno de los enclaves más extensos de la Comunidad Valenciana. Su vegetación y riachuelos ofrecen un entorno ideal para la fauna.
+              </p>
+
+              <p class="card-text mb-0">
+                Entre su fauna destacan el buitre leonado, el halcón peregrino, el águila perdicera, el jabalí, el ciervo y el martín pescador. tambien nos veremos sobrevolados por el halcón peregrino, el águila perdicera, el búho real o el martín pescador. En sus riachuelos habitan la nutria y la trucha común.
+              Al acercarnos a los riachuelos, veremos numerosas pisadas de jabalís y ciervos, y si no hacemos mucho ruido, no es dificil de encontrar alguno abrevando bajo la atenta mirada del martin pescador, esperando a la despistada trucha.</p>
+
+            </div>
+          </div>
+
+        </main>
+
       </div>
     </div>
-    <footer class="text-center bg-light mt-4">
-      <div class="container pt-4">
-        <section class="mb-4">
-          <a
-            class="btn btn-outline-dark btn-floating m-1"
-            href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_ES"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a
-            class="btn btn-outline-dark btn-floating m-1"
-            href="https://x.com/?lang=es"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a
-            class="btn btn-outline-dark btn-floating m-1"
-            href="https://www.google.com/?hl=es"
-            ><i class="fab fa-google"></i
-          ></a>
-          <a
-            class="btn btn-outline-dark btn-floating m-1"
-            href="https://www.instagram.com/?hl=es"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a
-            class="btn btn-outline-dark btn-floating m-1"
-            href="https://www.linkedin.com/home"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <a
-            class="btn btn-outline-dark btn-floating m-1"
-            href="https://github.com/"
-            ><i class="fab fa-github"></i
-          ></a>
-        </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center bg-white border-top mt-5">
+
+      <div class="container py-4">
+        <div class="mb-3">
+            <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://x.com/?lang=es"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://www.google.com/?hl=es"
+                  ><i class="fab fa-google"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://www.instagram.com/?hl=es"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://www.linkedin.com/home"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a
+                  class="btn btn-outline-dark btn-floating m-1"
+                  href="https://github.com/"
+                  ><i class="fab fa-github"></i
+                ></a>        
+
+        </div>
+
+        <small class="text-muted">
+          © 2026 - Parque Natural Sierra Bicuera
+        </small>
       </div>
-      <div class="text-center p-3 bg-body-secondary">
-        © 2026 - Parque Natural Sierra Bicuera
-      </div>
+
     </footer>
+
+    <!-- JS -->
+    <script>
+      fetch("./header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-container").innerHTML = data;
+        });
+
+      fetch("./menu.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("menu-container").innerHTML = data;
+        });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js.js"></script>
+
   </body>
 </html>

@@ -1,296 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  margin-left: 5%;
-  margin-right: 5%;
-  background-color: white;
-  color: black;
-  transition: 0.5s;
-}
-
-body.dark-mode {
-  background-color: #121212;
-  color: white;
-}
-
-.contenedor,
-.contenido {
-  border: 1px solid #d0d0d0;
-  background-color: #fafafa;
-  padding: 20px;
-  width: 85%;
-  margin: 30px auto;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
-  text-align: center;
-  font-family: monospace;
-  font-size: 40px;
-}
-
-.h1first {
-  color: darkgreen;
-}
-
-.h1second {
-  color: burlywood;
-}
-
-h2 {
-  color: #b58b4c;
-}
-
-.logo {
-  max-width: 1500px;
-  height: 250px;
-}
-
-.tabla {
-  border: 2px solid #d2b48c;
-  background-color: #f5f5dc;
-  margin-bottom: 20px;
-  padding: 10px;
-}
-
-.tabla h3 {
-  text-align: center;
-  background-color: #e6d3a3;
-  padding: 5px;
-  margin: 0 0 10px 0;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-}
-
-td,
-th {
-  border: 1px solid #d2b48c;
-  padding: 8px;
-}
-
-.titulo {
-  background-color: #e6f2e6;
-  font-weight: bold;
-}
-
-.menu-lateral {
-  width: 150px;
-  padding: 20px;
-  background-color: #fff;
-  font-family: Arial, sans-serif;
-}
-
-.menu-lateral ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-lateral li {
-  margin-bottom: 10px;
-}
-
-.btn-menu {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: #4a5d23;
-  padding: 12px 0;
-  font-weight: bold;
-  border: 1px solid #b5cc82;
-
-  background: linear-gradient(to bottom, #e2f2b1 0%, #ffffff 50%, #c9e088 100%);
-
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  transition: transform 0.1s;
-}
-
-.btn-menu:hover {
-  background: linear-gradient(to bottom, #edf7d2 0%, #ffffff 50%, #d8eb9f 100%);
-  filter: brightness(1.05);
-}
-
-.btn-menu:active {
-  transform: translateY(1px);
-  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.layout-principal {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 20px auto;
-  gap: 30px;
-}
-
-.contenido-principal {
-  flex: 1;
-  padding: 10px;
-}
-
-.menu-lateral {
-  height: 100vh;
-  border-right: 2px solid #ccc;
-  padding-top: 0;
-}
-
-.menu-lateral ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.footer {
-  text-align: center;
-}
-
-.header-img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  -webkit-mask-image: radial-gradient(
-    ellipse at center,
-    black 55%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(ellipse at center, black 55%, transparent 100%);
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
-  gap: 10px; /* Espacio entre imágenes */
-  margin: 20px 0;
-}
-
-.gallery img {
-  width: 100%;
-  height: 300px; /* Altura fija para uniformidad */
-  object-fit: cover; /* Recorta la imagen para llenar el espacio */
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Estilos del modal */
-.modal {
-  display: none; /* Oculto por defecto */
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  text-align: center;
-  padding: 30px;
-}
-
-.modal-contenido {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  margin-top: 5vh;
-}
-
-.modal-cerrar {
-  position: absolute;
-  top: 20px;
-  right: 30px;
+  font-family: "Inter", sans-serif;  
   color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
+  line-height: 1.6;
 }
 
-.modal-cerrar:hover {
-  color: #ccc;
+/* Todo el layout con el mismo color */
+main,
+.contenido,
+header,
+nav,
+footer {
+  background-color: rgb(188, 249, 188);
+  color: #fff;
 }
 
-.contenido-especies {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
+/* =========================
+   MENÚ LATERAL
+========================= */
+nav {
+  border-right: 1px solid rgba(0,0,0,0.1);
 }
 
-.animales-lista {
-  flex: 1;
+/* enlaces del menú */
+.list-group-item {
+  background-color: transparent;
+  color: var(--bs-body-color);
+  border: none;
+  transition: 0.2s ease;
 }
 
-#imagen-ampliada {
-  max-width: 95vw;
-  max-height: 90vh;
-  border-radius: 8px;
-  object-fit: contain;
+.list-group-item:hover {
+  background-color: rgba(0,0,0,0.05);
+  transform: translateX(3px);
 }
 
-#header-container {
-  padding-bottom: 10px;
-  /* border-bottom: 2px solid #ccc; */
+/* =========================
+   HEADER
+========================= */
+header img {
+  opacity: 0.9;
+  transition: 0.3s;
+  width: 100%;
+  object-fit: cover;
 }
 
-.imagen-destacada {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  padding: 15px;
-  border-left: 3px solid #333;
-  min-height: 300px;
-  flex: 1;
-  min-height: 200px;
-  display: flex;
-  align-items: center;
+header img:hover {
+  opacity: 1;
 }
 
-/* Texto inicial */
-.texto-click {
-  cursor: pointer;
-  font-size: 18px;
-  color: #222;
-  background: #f0f0f0;
-  padding: 12px 18px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  transition: 0.2s;
+/* =========================
+   FOOTER
+========================= */
+footer {
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
-.texto-click:hover {
-  background: #e6e6e6;
+/* =========================
+   CARDS (IMPORTANTE)
+========================= */
+.card {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
-#imagen-ampliada {
-  width: 200%;
-  max-width: 400px;
-  border-radius: 10px;
-  margin-top: 10px;
-  border: 2px solid #ddd;
+/* =========================
+   TEXTO GENERAL
+========================= */
+p {
+  color: var(--bs-body-color);
 }
 
-.contenido-especies {
-  display: flex;
-  gap: 20px;
+.menu-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("../imagenes/aguila.jpg"); 
+  background-size: cover;
+  background-position: 70% center;
+  opacity: 0.15;
+  z-index: 0;
 }
 
-.animales-lista {
-  width: 60%;
+.offcanvas {
+  min-height: 100vh;
 }
 
-.imagen-destacada {
-  width: 60%;
+.offcanvas-body {
+  position: relative;
+  overflow: hidden;
 }
 
-.cursor-pointer {
-  cursor: pointer;
+/* contenido encima */
+.offcanvas-body .list-group,
+.offcanvas-body .mt-auto {
+  position: relative;
+  z-index: 1;
 }
