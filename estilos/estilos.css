@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
 /* =========================
    RESET
@@ -165,7 +165,7 @@ button.btn-hamburguesa {
 }
 
 /* contenido encima del fondo */
-.offcanvas-body>* {
+.offcanvas-body > * {
   position: relative;
   z-index: 2;
 }
@@ -207,7 +207,11 @@ p {
 }
 
 .carousel-caption p {
-  color: rgb(241, 241, 241) !important;
+  /*color: rgb(241, 241, 241) !important;*/
+  color: rgb(255, 255, 255) !important;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: large;
 }
 
 .modern-item {
