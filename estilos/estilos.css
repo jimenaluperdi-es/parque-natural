@@ -1,49 +1,193 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-body {
-  font-family: "Inter", sans-serif;  
-  color: #fff;
-  line-height: 1.6;
+/* =========================
+   RESET
+========================= */
+* {
+  box-sizing: border-box;
 }
 
-/* Todo el layout con el mismo color */
-main,
-.contenido,
-header,
-nav,
-footer {
-  background-color: rgb(188, 249, 188);
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
   color: #fff;
+  line-height: 1.6;
+  background-color: rgb(188, 249, 188);
 }
 
 /* =========================
-   MENÚ LATERAL
+   LAYOUT GENERAL
 ========================= */
-nav {
-  border-right: 1px solid rgba(0,0,0,0.1);
+main,
+.contenido,
+header,
+footer {
+  color: black;
 }
 
-/* enlaces del menú */
-.list-group-item {
+/* Ocultar nav en pantallas pequeñas */
+nav.col-md-3 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  nav.col-md-3 {
+    display: block;
+  }
+}
+
+/* =========================
+   MENÚ LATERAL FIJO
+========================= */
+.menu-lateral {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: none;
+
+  /* 🔥 IMPORTANTE: quitamos background-image de aquí */
   background-color: transparent;
-  color: var(--bs-body-color);
+  overflow: hidden;
+}
+
+/* 🔥 IMAGEN COMO CAPA CONTROLADA */
+.menu-lateral::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../imagenes/aguila.jpg");
+  background-size: cover;
+
+  /* 👉 aquí sí ajustas la posición */
+  background-position: 65% center;
+
+  transform: scale(1.05);
+  /* evita bordes raros */
+  z-index: 0;
+}
+
+/* 🔥 OSCURECER PARA LEER BIEN */
+.menu-lateral::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* 🔥 TEXTO ENCIMA */
+.menu-lateral a,
+.menu-lateral h5 {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+/* Ajuste contenido en escritorio */
+@media (min-width: 992px) {
+  .menu-lateral {
+    display: block;
+  }
+
+  .contenido {
+    margin-left: 250px;
+  }
+}
+
+/* =========================
+   BOTÓN HAMBURGUESA
+========================= */
+button.btn-hamburguesa {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+  display: block !important;
+  visibility: visible !important;
+}
+
+@media (min-width: 992px) {
+  button.btn-hamburguesa {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+/* =========================
+   OFFCANVAS (MÓVIL)
+========================= */
+.offcanvas {
+  background-color: transparent !important;
+  color: #b81313;
+  min-height: 100vh;
+}
+
+/* evita desbordes raros */
+.offcanvas-body {
+  padding: 0;
+  overflow: hidden;
+}
+
+/* =========================
+   FONDO DEL MENÚ
+========================= */
+.menu-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("../imagenes/aguila.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+/* =========================
+   LISTA MENÚ
+========================= */
+.list-group-item {
+  background: transparent !important;
+  color: #fff !important;
   border: none;
   transition: 0.2s ease;
+  z-index: 2;
+  position: relative;
 }
 
+/* iconos visibles */
+.list-group-item i {
+  color: #fff;
+}
+
+/* hover moderno */
 .list-group-item:hover {
-  background-color: rgba(0,0,0,0.05);
-  transform: translateX(3px);
+  background-color: rgba(250, 248, 248, 0.945);
+  transform: translateX(4px);
+}
+
+/* contenido encima del fondo */
+.offcanvas-body>* {
+  position: relative;
+  z-index: 2;
+}
+
+/* footer del menú */
+.mt-auto {
+  position: relative;
+  z-index: 2;
 }
 
 /* =========================
    HEADER
 ========================= */
 header img {
-  opacity: 0.9;
-  transition: 0.3s;
   width: 100%;
   object-fit: cover;
+  opacity: 0.9;
+  transition: 0.3s;
 }
 
 header img:hover {
@@ -51,19 +195,12 @@ header img:hover {
 }
 
 /* =========================
-   FOOTER
-========================= */
-footer {
-  border-top: 1px solid rgba(0,0,0,0.1);
-}
-
-/* =========================
-   CARDS (IMPORTANTE)
+   CARDS
 ========================= */
 .card {
   background-color: var(--bs-body-bg);
   color: var(--bs-body-color);
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* =========================
@@ -73,28 +210,18 @@ p {
   color: var(--bs-body-color);
 }
 
-.menu-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("../imagenes/aguila.jpg"); 
-  background-size: cover;
-  background-position: 70% center;
-  opacity: 0.15;
-  z-index: 0;
+.carousel-caption p {
+  color: rgb(241, 241, 241) !important;
 }
 
-.offcanvas {
-  min-height: 100vh;
+.modern-item {
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border-radius: 12px;
 }
 
-.offcanvas-body {
-  position: relative;
-  overflow: hidden;
-}
-
-/* contenido encima */
-.offcanvas-body .list-group,
-.offcanvas-body .mt-auto {
-  position: relative;
-  z-index: 1;
+.modern-item:hover {
+  background-color: #f1f9f6;
+  transform: translateX(5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
