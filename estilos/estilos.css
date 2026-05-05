@@ -28,9 +28,10 @@ footer {
 /* Ocultar nav en pantallas pequeñas */
 nav.col-md-3 {
   display: none;
+  background: transparent !important;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 468px) {
   nav.col-md-3 {
     display: block;
   }
